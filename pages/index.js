@@ -5,19 +5,18 @@ import CardItem from '../components/CardItem';
 import CardListItem from '../components/CardListItem';
 
 export default function Home() {
-
   return (
     <PageLayout>
       <AuthorIntro />
-      <hr/>
-      <Row className="mb-5">
-        <Col md="10">
+      <hr />
+      <Row className='mb-5'>
+        <Col md='10'>
           <CardListItem />
         </Col>
-        <Col md="4">
+        <Col md='4'>
           <CardItem />
         </Col>
       </Row>
     </PageLayout>
-  )
+  );
 }
