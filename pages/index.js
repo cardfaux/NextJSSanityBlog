@@ -1,4 +1,6 @@
 import { Row, Col } from 'react-bootstrap';
+import styled from 'styled-components';
+
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import CardItem from 'components/CardItem';
@@ -6,9 +8,15 @@ import CardItem from 'components/CardItem';
 
 import { getAllBlogs } from 'lib/api';
 
+const Title = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
 export default function Home({ blogs }) {
   return (
     <PageLayout>
+      <Title>My First Next.js Page</Title>
       <AuthorIntro />
       <hr />
       <Row className='mb-5'>
