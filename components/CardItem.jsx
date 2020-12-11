@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap';
 
-const CardItem = ({ title, subtitle }) => {
+const CardItem = (props) => {
   return (
     <Card className={`fj-card`}>
       <div className='card-body-wrapper'>
@@ -23,8 +23,8 @@ const CardItem = ({ title, subtitle }) => {
           <Card.Img src='https://via.placeholder.com/250' alt='Card image cap' />
         </div>
         <Card.Body>
-          <Card.Title className='card-main-title'>{title}</Card.Title>
-          <Card.Text>{subtitle}</Card.Text>
+          <Card.Title className='card-main-title'>{props.title}</Card.Title>
+          <Card.Text>{props.subtitle}</Card.Text>
         </Card.Body>
       </div>
       <a className='card-button'>Read More</a>
