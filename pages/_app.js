@@ -1,6 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 import '../styles/globals.css';
+import 'highlight.js/styles/darcula.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.scss';
 
