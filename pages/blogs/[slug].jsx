@@ -6,7 +6,7 @@ const BlogDetail = () => {
 
   return (
     <PageLayout>
-      <h1>Hello Detail Page - {query?.slug}</h1>
+      <h1>Hello Detail Page - {query.slug}</h1>
     </PageLayout>
   );
 };
