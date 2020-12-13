@@ -14,3 +14,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+div.mb-5.cards-list-items.row {
+  display: flex;
+  justify-content: center;
+}
