@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import useSWR from 'swr';
 import { Row, Col } from 'react-bootstrap';
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
@@ -8,10 +9,14 @@ import FilteringMenu from 'components/FilteringMenu';
 
 import { getAllBlogs } from 'lib/api';
 
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
 export default function Home({ blogs }) {
   const [filter, setFilter] = useState({
     view: { list: 0 },
   });
+
+  const { data, error } = useSWR('/api/hello', fetcher);
 
   return (
     <PageLayout>
@@ -24,6 +29,9 @@ export default function Home({ blogs }) {
       />
       <hr />
       <Row className='mb-5'>
+        {/* <Col md="10">
+          <CardListItem />
+        </Col> */}
         {blogs.map((blog) =>
           filter.view.list ? (
             <Col key={`${blog.slug}-list`} md='9'>
