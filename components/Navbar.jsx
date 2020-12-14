@@ -12,7 +12,7 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
     >
       <Navbar.Brand className='fj-navbar-brand'>
         <Link href='/'>
-          <a style={{ color: theme.fontColor }}>Filip-Jerga</a>
+          <a style={{ color: theme.fontColor }}>James-Hagood</a>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />

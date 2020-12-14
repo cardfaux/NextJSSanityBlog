@@ -4,11 +4,12 @@ import { Row, Button } from 'react-bootstrap';
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import FilteringMenu from 'components/FilteringMenu';
+import PreviewAlert from 'components/PreviewAlert';
 
 import { useGetBlogsPages } from 'actions/pagination';
 import { getPaginatedBlogs } from 'lib/api';
 
-export default function Home({ blogs }) {
+export default function Home({ blogs, preview }) {
   const [filter, setFilter] = useState({
     view: { list: 0 },
     date: { asc: 0 },
@@ -21,6 +22,7 @@ export default function Home({ blogs }) {
 
   return (
     <PageLayout>
+      {preview && <PreviewAlert />}
       <AuthorIntro />
       <FilteringMenu
         filter={filter}
@@ -42,11 +44,12 @@ export default function Home({ blogs }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
   const blogs = await getPaginatedBlogs({ offset: 0, date: 'desc' });
   return {
     props: {
       blogs,
+      preview,
     },
   };
 }

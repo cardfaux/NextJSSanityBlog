@@ -7,8 +7,9 @@ import moment from 'moment';
 import { useRouter } from 'next/router';
 
 import BlogContent from 'components/BlogContent';
+import PreviewAlert from 'components/PreviewAlert';
 
-const BlogDetail = ({ blog }) => {
+const BlogDetail = ({ blog, preview }) => {
   const router = useRouter();
 
   if (!router.isFallback && !blog?.slug) {
@@ -16,7 +17,6 @@ const BlogDetail = ({ blog }) => {
   }
 
   if (router.isFallback) {
-    console.log('Loading fallback page');
     return <PageLayout className='blog-detail-page'>Loading...</PageLayout>;
   }
 
@@ -24,6 +24,7 @@ const BlogDetail = ({ blog }) => {
     <PageLayout className='blog-detail-page'>
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
+          {preview && <PreviewAlert />}
           <BlogHeader
             title={blog.title}
             subtitle={blog.subtitle}
@@ -39,10 +40,10 @@ const BlogDetail = ({ blog }) => {
   );
 };
 
-export async function getStaticProps({ params }) {
-  const blog = await getBlogBySlug(params.slug);
+export async function getStaticProps({ params, preview = false, previewData }) {
+  const blog = await getBlogBySlug(params.slug, preview);
   return {
-    props: { blog },
+    props: { blog, preview },
   };
 }
 
