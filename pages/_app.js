@@ -1,6 +1,11 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { library, config } from '@fortawesome/fontawesome-svg-core';
-import { faBorderAll, faList } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBorderAll,
+  faList,
+  faSortNumericDown,
+  faSortNumericUp,
+} from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/globals.css';
 import 'highlight.js/styles/dracula.css';
@@ -9,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.scss';
 
 config.autoAddCss = false;
-library.add(faList, faBorderAll);
+library.add(faList, faBorderAll, faSortNumericDown, faSortNumericUp);
 
 const GlobalStyle = createGlobalStyle`
   body {

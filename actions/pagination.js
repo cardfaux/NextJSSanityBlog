@@ -1,27 +1,56 @@
+import { useEffect } from 'react';
+
 import { useSWRPages } from 'swr';
 import { useGetBlogs } from 'actions';
 import { Col } from 'react-bootstrap';
 import CardItem from 'components/CardItem';
+import CardItemBlank from 'components/CardItemBlank';
 import CardListItem from 'components/CardListItem';
+import CardListItemBlank from 'components/CardListItemBlank';
+import moment from 'moment';
 
-export const useGetBlogsPages = ({ blogs: initialData, filter }) => {
+export const useGetBlogsPages = ({ blogs, filter }) => {
+  useEffect(() => {
+    window.__pagination__init = true;
+  }, []);
+
   return useSWRPages(
     'index-page',
     ({ offset, withSWR }) => {
-      const { data: blogs } = withSWR(useGetBlogs(initialData));
+      let initialData = !offset && blogs;
 
-      if (!blogs) {
-        return 'Loading...';
+      if (typeof window !== 'undefined' && window.__pagination__init) {
+        initialData = null;
       }
 
-      return blogs.map((blog) =>
+      const { data: paginatedBlogs } = withSWR(
+        useGetBlogs({ offset, filter }, initialData)
+      );
+
+      if (!paginatedBlogs) {
+        return Array(3)
+          .fill(0)
+          .map((_, i) =>
+            filter.view.list ? (
+              <Col key={i} md='9'>
+                <CardListItemBlank />
+              </Col>
+            ) : (
+              <Col key={`${i}-item`} md='4'>
+                <CardItemBlank />
+              </Col>
+            )
+          );
+      }
+
+      return paginatedBlogs.map((blog) =>
         filter.view.list ? (
           <Col key={`${blog.slug}-list`} md='9'>
             <CardListItem
               author={blog.author}
               title={blog.title}
               subtitle={blog.subtitle}
-              date={blog.date}
+              date={moment(blog.date).format('LLL')}
               link={{
                 href: '/blogs/[slug]',
                 as: `/blogs/${blog.slug}`,
@@ -34,7 +63,7 @@ export const useGetBlogsPages = ({ blogs: initialData, filter }) => {
               author={blog.author}
               title={blog.title}
               subtitle={blog.subtitle}
-              date={blog.date}
+              date={moment(blog.date).format('LLL')}
               image={blog.coverImage}
               link={{
                 href: '/blogs/[slug]',
@@ -49,7 +78,10 @@ export const useGetBlogsPages = ({ blogs: initialData, filter }) => {
     // SWR: data you will get from 'withSWR' function
     // index: number of current page
     (SWR, index) => {
-      return 0;
+      if (SWR.data && SWR.data.length === 0) {
+        return null;
+      }
+      return (index + 1) * 6;
     },
     [filter]
   );

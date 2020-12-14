@@ -2,6 +2,7 @@ import PageLayout from 'components/PageLayout';
 import BlogHeader from 'components/BlogHeader';
 import { getBlogBySlug, getAllBlogs, urlFor } from 'lib/api';
 import { Row, Col } from 'react-bootstrap';
+import moment from 'moment';
 
 import BlogContent from 'components/BlogContent';
 
@@ -15,10 +16,10 @@ const BlogDetail = ({ blog }) => {
             subtitle={blog.subtitle}
             coverImage={urlFor(blog.coverImage).height(600).url()}
             author={blog.author}
-            date={blog.date}
+            date={moment(blog.date).format('LLL')}
           />
           <hr />
-          <BlogContent content={blog.content} />
+          {blog.content && <BlogContent content={blog.content} />}
         </Col>
       </Row>
     </PageLayout>
@@ -32,6 +33,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
+// TODO: Introduce fallback
 export async function getStaticPaths() {
   const blogs = await getAllBlogs();
   return {
