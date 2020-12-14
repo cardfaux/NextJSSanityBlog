@@ -1,6 +1,12 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import ThemeProvider from 'providers/ThemeProvider';
+import {
+  createGlobalStyle,
+  ThemeProvider as StyledThemeProvider,
+} from 'styled-components';
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import {
+  faSun,
+  faMoon,
   faBorderAll,
   faList,
   faSortNumericDown,
@@ -14,7 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.scss';
 
 config.autoAddCss = false;
-library.add(faList, faBorderAll, faSortNumericDown, faSortNumericUp);
+library.add(faSun, faMoon, faList, faBorderAll, faSortNumericDown, faSortNumericUp);
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -34,9 +40,11 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <StyledThemeProvider theme={theme}>
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </StyledThemeProvider>
     </>
   );
 }
