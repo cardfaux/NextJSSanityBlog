@@ -19,7 +19,7 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='ml-auto'>
           {/* <div></div> */}
-          <ThemeToggle onChange={toggleTheme} />
+          {/* <ThemeToggle onChange={toggleTheme} /> */}
           <Nav.Link
             as={() => (
               <Link href='/'>
@@ -27,6 +27,15 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
               </Link>
             )}
           />
+
+          <Nav.Link
+            as={() => (
+              <Link href='/blogs'>
+                <a className='fj-navbar-item fj-navbar-link'>Blog</a>
+              </Link>
+            )}
+          />
+          <ThemeToggle onChange={toggleTheme} />
         </Nav>
       </Navbar.Collapse>
     </Navbar>
