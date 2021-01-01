@@ -1,10 +1,3 @@
-create .env.local file in root folder with values of:
-SANITY_DATASET_NAME=YOUR_DATASET_NAME
-SANITY_PROJECT_ID=YOUR_PROJECT_ID
-Run the development server:
-npm run dev
+# http://localhost:3000 is where the website can be found
 
-# or
-
-yarn dev
-Open http://localhost:3000 with your browser to see the result.
+# http://localhost:3333 is where the sanity UI can be found
