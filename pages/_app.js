@@ -17,6 +17,7 @@ import '../styles/globals.css';
 import 'highlight.js/styles/dracula.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toggle/style.css';
 import '../styles/index.scss';
 
 config.autoAddCss = false;
