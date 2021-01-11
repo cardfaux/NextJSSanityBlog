@@ -18,6 +18,8 @@ const ThemeProvider = ({ children }) => {
   return <ThemeContext.Provider value={themeAPI}>{children}</ThemeContext.Provider>;
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+  return useContext(ThemeContext);
+};
 
 export default ThemeProvider;
