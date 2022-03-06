@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Row, Button } from 'react-bootstrap';
-import PageLayout from 'components/PageLayout';
+import PageLayout from 'components/Layouts/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import FilteringMenu from 'components/FilteringMenu';
 import PreviewAlert from 'components/PreviewAlert';
@@ -11,6 +11,7 @@ import { getPaginatedBlogs } from 'lib/api';
 
 import { Col } from 'react-bootstrap';
 import CardItem from 'components/CardItem';
+import AboveFold from 'components/Homepage/AboveFold/AboveFold';
 import CardItemBlank from 'components/CardItemBlank';
 import CardListItem from 'components/CardListItem';
 import CardListItemBlank from 'components/CardListItemBlank';
@@ -62,6 +63,7 @@ export default function Home({ blogs, preview }) {
   return (
     <PageLayout>
       {preview && <PreviewAlert />}
+      <AboveFold />
       <AuthorIntro />
       <FilteringMenu
         filter={filter}

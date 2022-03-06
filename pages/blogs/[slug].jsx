@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PageLayout from 'components/PageLayout';
+import PageLayout from 'components/Layouts/PageLayout';
 import BlogHeader from 'components/BlogHeader';
 import ErrorPage from 'next/error';
 import { getBlogBySlug, getAllBlogs, onBlogUpdate } from 'lib/api';

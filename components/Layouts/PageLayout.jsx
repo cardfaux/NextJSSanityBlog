@@ -1,6 +1,7 @@
-import { Container } from 'react-bootstrap';
+import { MainContainer } from './PageLayoutStyles';
+
 import Head from 'next/head';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { useTheme } from 'providers/ThemeProvider';
 
 export default function PageLayout({ children, className }) {
@@ -13,7 +14,7 @@ export default function PageLayout({ children, className }) {
           rel='stylesheet'
         />
       </Head>
-      <Container>
+      <MainContainer>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <div className={`page-wrapper ${className}`}>{children}</div>
         <footer className='page-footer'>
@@ -25,7 +26,7 @@ export default function PageLayout({ children, className }) {
             <a href='#'>facebook</a>
           </div>
         </footer>
-      </Container>
+      </MainContainer>
       <style jsx global>
         {`
           html,

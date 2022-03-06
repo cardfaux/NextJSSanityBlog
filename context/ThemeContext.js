@@ -9,7 +9,7 @@ export const themes = {
   dark: {
     type: 'dark',
     fontColor: '#dcdcdc',
-    background: '#2b2c38',
+    background: '#1F1F50',
   },
 };
 

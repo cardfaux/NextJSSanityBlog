@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Row, Button } from 'react-bootstrap';
-import PageLayout from 'components/PageLayout';
+import PageLayout from 'components/Layouts/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import FilteringMenu from 'components/FilteringMenu';
 import PreviewAlert from 'components/PreviewAlert';
