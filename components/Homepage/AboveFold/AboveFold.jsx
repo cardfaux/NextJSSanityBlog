@@ -1,5 +1,4 @@
 import Phoenix from '../Phoenix';
-import PhoenixLogo from '../PhoenixLogo';
 import { StyledPhoenixContainer } from './AboveFoldStyles';
 import { FoldSection, FoldGrid } from './AboveFoldStyles';
 
@@ -22,7 +21,7 @@ const AboveFold = () => {
           </p>
         </div>
         <StyledPhoenixContainer className='phoenix'>
-          <PhoenixLogo />
+          <Phoenix />
         </StyledPhoenixContainer>
       </FoldGrid>
     </FoldSection>

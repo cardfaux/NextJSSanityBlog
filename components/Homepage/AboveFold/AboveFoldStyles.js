@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import PhoenixLogo from '../PhoenixLogo';
-
 export const FoldSection = styled.section`
   position: relative;
 `;
