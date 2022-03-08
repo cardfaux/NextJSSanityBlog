@@ -14,7 +14,9 @@ export const StyledHeader = styled.header`
   top: 0;
   left: 0;
   background: url('header.svg') #1f1f50;
+  background-repeat: no-repeat;
   filter: opacity(14%) brightness(100%) blur(4px);
   height: 428px;
-  width: 1610px;
+  max-width: 1610px;
+  min-width: 100%;
 `;
