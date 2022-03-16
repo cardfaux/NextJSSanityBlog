@@ -13,6 +13,7 @@ import { Col } from 'react-bootstrap';
 import CardItem from 'components/CardItem';
 import AboveFold from 'components/Homepage/AboveFold/AboveFold';
 import WhatWeDo from 'components/Homepage/WhatWeDo/WhatWeDo';
+import OurWorks from 'components/Homepage/OurWorks/OurWorks';
 import CardItemBlank from 'components/CardItemBlank';
 import CardListItem from 'components/CardListItem';
 import CardListItemBlank from 'components/CardListItemBlank';
@@ -66,6 +67,7 @@ export default function Home({ blogs, preview }) {
       {preview && <PreviewAlert />}
       <AboveFold />
       <WhatWeDo />
+      <OurWorks />
       <AuthorIntro />
       <FilteringMenu
         filter={filter}

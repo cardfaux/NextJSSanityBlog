@@ -7,6 +7,18 @@ export const StyledNavbar = styled(Navbar)`
   /* margin: 0 auto 23rem auto; */
   padding-top: 5rem !important;
   margin-bottom: 0;
+  a.fj-navbar-item.fj-navbar-link.active {
+    color: #00b7f1;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  a.fj-navbar-item.fj-navbar-link {
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
 `;
 
 export const StyledHeader = styled.header`
@@ -17,6 +29,6 @@ export const StyledHeader = styled.header`
   background-repeat: no-repeat;
   filter: opacity(14%) brightness(100%) blur(4px);
   height: 428px;
-  max-width: 1610px;
+  max-width: 100%;
   min-width: 100%;
 `;

@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const StyledSection = styled.section`
+  h2.what--title {
+    color: #00b7f1;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+`;
+
 export const TwoColumnGrid = styled.div`
   position: relative;
   display: grid;
@@ -7,6 +16,12 @@ export const TwoColumnGrid = styled.div`
   align-items: end;
   justify-items: center;
   margin-bottom: 2rem;
+  p.side--text {
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 `;
 
 export const GlassCard = styled.div`
@@ -46,4 +61,15 @@ export const TextOverlay = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   padding: 0px 44px;
+  h3 {
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  p {
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+  }
 `;

@@ -8,8 +8,32 @@ export const FoldSection = styled.section`
 export const FoldGrid = styled.div`
   display: grid;
   grid-template-columns: 50% 60%;
-  justify-items: start;
+  justify-items: center;
   align-items: center;
+  .text {
+    h1 {
+      color: #3bd0ff;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 30px;
+    }
+    h2 {
+      color: #ffffff;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 30px 0;
+      font-size: 41px;
+    }
+    p {
+      color: #ffffff;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      width: 110%;
+    }
+  }
 `;
 
 export const StyledPhoenixContainer = styled.div`

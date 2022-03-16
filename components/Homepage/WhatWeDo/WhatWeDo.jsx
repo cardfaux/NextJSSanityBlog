@@ -1,9 +1,14 @@
-import { TwoColumnGrid, GlassCard, TextOverlay } from './WhatWeDoStyles';
+import {
+  TwoColumnGrid,
+  GlassCard,
+  TextOverlay,
+  StyledSection,
+} from './WhatWeDoStyles';
 
 const WhatWeDo = () => {
   return (
-    <section>
-      <h2>what do we do?</h2>
+    <StyledSection>
+      <h2 className='what--title'>what do we do?</h2>
       <TwoColumnGrid>
         <GlassCard></GlassCard>
         <TextOverlay>
@@ -27,7 +32,7 @@ const WhatWeDo = () => {
           </p>
         </TextOverlay>
         <div>
-          <p>
+          <p className='side--text'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
@@ -63,7 +68,7 @@ const WhatWeDo = () => {
           </p>
         </TextOverlay>
         <div>
-          <p>
+          <p className='side--text'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
@@ -98,13 +103,13 @@ const WhatWeDo = () => {
           </p>
         </TextOverlay>
         <div>
-          <p>
+          <p className='side--text'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
         </div>
       </TwoColumnGrid>
-    </section>
+    </StyledSection>
   );
 };
 
