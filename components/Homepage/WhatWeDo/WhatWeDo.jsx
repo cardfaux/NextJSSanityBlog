@@ -31,7 +31,7 @@ const WhatWeDo = () => {
             readable content of a page when looking at its layout.
           </p>
         </TextOverlay>
-        <div>
+        <div className='body--text'>
           <p className='side--text'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
@@ -67,7 +67,7 @@ const WhatWeDo = () => {
             readable content of a page when looking at its layout.
           </p>
         </TextOverlay>
-        <div>
+        <div className='body--text'>
           <p className='side--text'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
@@ -102,7 +102,7 @@ const WhatWeDo = () => {
             readable content of a page when looking at its layout.
           </p>
         </TextOverlay>
-        <div>
+        <div className='body--text'>
           <p className='side--text'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.

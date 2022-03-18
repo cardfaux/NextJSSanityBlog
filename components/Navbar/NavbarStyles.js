@@ -11,12 +11,14 @@ export const StyledNavbar = styled(Navbar)`
     color: #00b7f1;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
+    font-size: 20px;
     text-transform: uppercase;
   }
   a.fj-navbar-item.fj-navbar-link {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
+    font-size: 20px;
     text-transform: uppercase;
   }
 `;

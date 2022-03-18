@@ -14,6 +14,8 @@ import CardItem from 'components/CardItem';
 import AboveFold from 'components/Homepage/AboveFold/AboveFold';
 import WhatWeDo from 'components/Homepage/WhatWeDo/WhatWeDo';
 import OurWorks from 'components/Homepage/OurWorks/OurWorks';
+import TestimonialsSection from 'components/Homepage/Testimonials/Testimonials';
+import FeaturedBlogSection from 'components/Homepage/FeaturedBlog/FeaturedBlog';
 import CardItemBlank from 'components/CardItemBlank';
 import CardListItem from 'components/CardListItem';
 import CardListItemBlank from 'components/CardListItemBlank';
@@ -68,6 +70,8 @@ export default function Home({ blogs, preview }) {
       <AboveFold />
       <WhatWeDo />
       <OurWorks />
+      <TestimonialsSection />
+      <FeaturedBlogSection />
       <AuthorIntro />
       <FilteringMenu
         filter={filter}

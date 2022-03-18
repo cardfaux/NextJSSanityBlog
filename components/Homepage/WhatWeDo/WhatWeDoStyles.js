@@ -5,6 +5,8 @@ export const StyledSection = styled.section`
     color: #00b7f1;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
+    font-size: 30px;
+    margin: 50px 0;
     text-transform: uppercase;
   }
 `;
@@ -16,11 +18,16 @@ export const TwoColumnGrid = styled.div`
   align-items: end;
   justify-items: center;
   margin-bottom: 2rem;
+  .body--text {
+    max-width: 72%;
+  }
   p.side--text {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
+    font-size: 35px;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 `;
 
@@ -65,11 +72,13 @@ export const TextOverlay = styled.div`
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
+    font-size: 31px;
     text-transform: capitalize;
   }
   p {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
+    font-size: 12px;
   }
 `;

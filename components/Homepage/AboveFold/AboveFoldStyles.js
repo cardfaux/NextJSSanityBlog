@@ -31,7 +31,7 @@ export const FoldGrid = styled.div`
       font-family: 'Josefin Sans', sans-serif;
       font-weight: 300;
       font-size: 20px;
-      width: 110%;
+      width: 112%;
     }
   }
 `;

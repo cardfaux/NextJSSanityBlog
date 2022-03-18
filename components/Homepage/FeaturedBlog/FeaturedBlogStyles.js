@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const OurWorksSection = styled.section`
+export const FeaturedBlogSection = styled.section`
+  margin-bottom: 10rem;
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;
@@ -59,15 +60,6 @@ export const OurWorksSection = styled.section`
         font-weight: 400;
         font-size: 13px;
       }
-    }
-  }
-  .phoenix--egg {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    svg {
-      width: 471px;
-      transform: rotateZ(15deg);
     }
   }
 `;
