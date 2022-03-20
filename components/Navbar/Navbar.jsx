@@ -54,7 +54,7 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
 
             <Nav.Link
               as={() => (
-                <Link href='/'>
+                <Link href='/projects'>
                   <a className='fj-navbar-item fj-navbar-link'>Portfolio</a>
                 </Link>
               )}

@@ -97,6 +97,9 @@ export default function Home({ blogs, preview }) {
   );
 }
 
+// this function is ran during the build (build time)
+// Provides props to your page
+// It will create a stati cpage
 export async function getStaticProps({ preview = false }) {
   const blogs = await getPaginatedBlogs({ offset: 0, date: 'desc' });
   return {

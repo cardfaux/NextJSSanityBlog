@@ -108,5 +108,46 @@ export default createSchema({
         },
       ],
     },
+    {
+      name: 'project',
+      type: 'document',
+      title: 'Project',
+      fields: [
+        {
+          name: 'projectTitle',
+          title: 'Project Title',
+          type: 'string',
+        },
+        {
+          name: 'projectSubtitle',
+          type: 'string',
+          title: 'Project Subtitle',
+        },
+        {
+          name: 'projectImage',
+          title: 'Project Image',
+          type: 'image',
+          fields: [
+            {
+              type: 'text',
+              name: 'alt',
+              title: 'Description',
+            },
+          ],
+        },
+        {
+          name: 'date',
+          title: 'Date',
+          type: 'datetime',
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: 'slug',
+          type: 'slug',
+          title: 'Slug',
+          validation: (Rule) => Rule.required(),
+        },
+      ],
+    },
   ]),
 });
