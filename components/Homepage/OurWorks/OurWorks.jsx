@@ -1,12 +1,22 @@
 import { OurWorksSection } from './OurWorksStyles';
 import PhoenixEgg from '../PhoenixEgg';
 
-const OurWorks = () => {
+const OurWorks = ({ projects }) => {
   return (
     <OurWorksSection className='our--works'>
       <h1>our works</h1>
       <div className='works--grid'>
-        <div className='works--item'>
+        {projects.map((project) => {
+          return (
+            <div key={project.slug} className='works--item'>
+              <div className='works--text'>
+                <h3>{project.projectTitle}</h3>
+                <p>{project.projectSubtitle}</p>
+              </div>
+            </div>
+          );
+        })}
+        {/* <div className='works--item'>
           <div className='works--text'>
             <h3>COMPANY NAME</h3>
             <p>
@@ -34,7 +44,7 @@ const OurWorks = () => {
               readable content of a page when looking at its layout.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className='phoenix--egg'>
         <PhoenixEgg />

@@ -28,7 +28,7 @@ export const OurWorksSection = styled.section`
     justify-items: center;
     gap: 25px;
     .works--item {
-      max-width: 100%;
+      width: 100%;
       aspect-ratio: 1 / 1;
       background-color: #404071;
       border: inset;

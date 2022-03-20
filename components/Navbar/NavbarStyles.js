@@ -24,7 +24,7 @@ export const StyledNavbar = styled(Navbar)`
 `;
 
 export const StyledHeader = styled.header`
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
   background: url('header.svg') #1f1f50;
@@ -32,5 +32,5 @@ export const StyledHeader = styled.header`
   filter: opacity(14%) brightness(100%) blur(4px);
   height: 428px;
   max-width: 100%;
-  min-width: 100%;
+  min-width: 100%; */
 `;

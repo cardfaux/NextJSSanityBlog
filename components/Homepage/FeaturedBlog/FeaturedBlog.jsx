@@ -1,11 +1,21 @@
 import { FeaturedBlogSection } from './FeaturedBlogStyles';
 
-const OurWorks = () => {
+const OurWorks = ({ featuredBlogs }) => {
   return (
     <FeaturedBlogSection className='our--works'>
       <h1>feautured blog</h1>
       <div className='works--grid'>
-        <div className='works--item'>
+        {featuredBlogs.map((blog) => {
+          return (
+            <div key={blog.slug} className='works--item'>
+              <div className='works--text'>
+                <h3>{blog.title}</h3>
+                <p>{blog.subtitle}</p>
+              </div>
+            </div>
+          );
+        })}
+        {/* <div className='works--item'>
           <div className='works--text'>
             <h3>blog NAME</h3>
             <p>
@@ -33,7 +43,7 @@ const OurWorks = () => {
               readable content of a page when looking at its layout.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </FeaturedBlogSection>
   );

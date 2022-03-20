@@ -1,5 +1,6 @@
 import { Card } from 'react-bootstrap';
 import Link from 'next/link';
+import { urlFor } from 'lib/api';
 
 const CardItem = ({ projectTitle, projectSubtitle, image, date, link }) => {
   return (
@@ -21,7 +22,10 @@ const CardItem = ({ projectTitle, projectSubtitle, image, date, link }) => {
           </div>
         </Card.Header>
         <div className='view overlay'>
-          <Card.Img src={image} alt='Card image cap' />
+          <Card.Img
+            src={urlFor(image).height(300).crop('center').fit('clip').url()}
+            alt='Card image cap'
+          />
         </div>
         <Card.Body>
           <Card.Title className='card-main-title'>{projectTitle}</Card.Title>

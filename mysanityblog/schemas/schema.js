@@ -106,6 +106,11 @@ export default createSchema({
           title: 'Slug',
           validation: (Rule) => Rule.required(),
         },
+        {
+          title: 'Should this blog be featured',
+          name: 'featured',
+          type: 'boolean',
+        },
       ],
     },
     {
@@ -136,6 +141,52 @@ export default createSchema({
           ],
         },
         {
+          name: 'content',
+          title: 'Content',
+          type: 'array',
+          of: [
+            {
+              type: 'block',
+            },
+            {
+              type: 'image',
+              fields: [
+                {
+                  title: 'Position',
+                  name: 'position',
+                  type: 'string',
+                  options: {
+                    list: [
+                      { title: 'Center', value: 'center' },
+                      { title: 'Left', value: 'left' },
+                      { title: 'Right', value: 'right' },
+                    ],
+                    layout: 'radio',
+                    isHighlighted: true,
+                  },
+                },
+                {
+                  type: 'text',
+                  name: 'alt',
+                  title: 'Description',
+                  options: {
+                    isHighlighted: true,
+                  },
+                },
+              ],
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              type: 'code',
+              options: {
+                withFilename: true,
+              },
+            },
+          ],
+        },
+        {
           name: 'date',
           title: 'Date',
           type: 'datetime',
@@ -146,6 +197,11 @@ export default createSchema({
           type: 'slug',
           title: 'Slug',
           validation: (Rule) => Rule.required(),
+        },
+        {
+          title: 'Should this project be featured',
+          name: 'featured',
+          type: 'boolean',
         },
       ],
     },

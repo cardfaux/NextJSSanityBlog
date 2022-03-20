@@ -7,7 +7,7 @@ import FilteringMenu from 'components/FilteringMenu';
 import PreviewAlert from 'components/PreviewAlert';
 
 import { useGetBlogsPages } from 'actions/pagination';
-import { getPaginatedBlogs } from 'lib/api';
+import { getPaginatedBlogs, getFeaturedProjects, getFeaturedBlogs } from 'lib/api';
 
 import { Col } from 'react-bootstrap';
 import CardItem from 'components/CardItem';
@@ -56,22 +56,24 @@ export const BlogList = ({ data = [], filter }) => {
   );
 };
 
-export default function Home({ blogs, preview }) {
+export default function Home({ blogs, preview, projects, featuredBlogs }) {
   const [filter, setFilter] = useState({
     view: { list: 0 },
     date: { asc: 0 },
   });
 
   const { data, size, setSize, hitEnd } = useGetBlogsPages({ filter });
-
+  // TO DO: I am recieving the featured projects data here, data needs passed to the FeaturedBlogSection
+  console.log(projects);
+  console.log(featuredBlogs);
   return (
     <PageLayout>
       {preview && <PreviewAlert />}
       <AboveFold />
       <WhatWeDo />
-      <OurWorks />
+      <OurWorks projects={projects} />
       <TestimonialsSection />
-      <FeaturedBlogSection />
+      <FeaturedBlogSection featuredBlogs={featuredBlogs} />
       <AuthorIntro />
       <FilteringMenu
         filter={filter}
@@ -102,10 +104,14 @@ export default function Home({ blogs, preview }) {
 // It will create a stati cpage
 export async function getStaticProps({ preview = false }) {
   const blogs = await getPaginatedBlogs({ offset: 0, date: 'desc' });
+  const projects = await getFeaturedProjects();
+  const featuredBlogs = await getFeaturedBlogs();
   return {
     props: {
       blogs,
       preview,
+      projects,
+      featuredBlogs,
     },
     revalidate: 1,
   };

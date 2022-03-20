@@ -1,7 +1,9 @@
 import PageLayout from '../../components/Layouts/PageLayout';
 import BlogHeader from 'components/BlogHeader';
+import ProjectContent from '../../components/ProjectsPage/ProjectContent';
 import { getProjectBySlug, getAllProjects } from 'lib/api';
 import { Row, Col } from 'react-bootstrap';
+import { urlFor } from 'lib/api';
 
 const ProjectDetail = ({ project }) => {
   return (
@@ -11,21 +13,12 @@ const ProjectDetail = ({ project }) => {
           <BlogHeader
             title={project.projectTitle}
             subtitle={project.projectSubtitle}
-            coverImage={project.coverImage}
+            coverImage={urlFor(project.coverImage).height(600).url()}
             // author={project.author}
             date={project.date}
           />
           <hr />
-          {/* Blog Content Here */}
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of using
-          Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-          as opposed to using 'Content here, content here', making it look like
-          readable English. Many desktop publishing packages and web page editors now
-          use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
-          will uncover many web sites still in their infancy. Various versions have
-          evolved over the years, sometimes by accident, sometimes on purpose
-          (injected humour and the like).
+          <ProjectContent content={project.content} />
         </Col>
       </Row>
     </PageLayout>
