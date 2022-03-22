@@ -44,4 +44,8 @@ export default function PageLayout({ children, className }) {
 
 const StyledWrapper = styled.div`
   position: relative;
+  .page-wrapper {
+    z-index: 2;
+    position: relative;
+  }
 `;

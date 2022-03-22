@@ -16,3 +16,20 @@ export const useGetBlogs = ({ offset, filter }, initialData) => {
     { initialData }
   );
 };
+
+export const getProjects = (url) => {
+  return fetcher(url);
+};
+
+// export const useGetProjects = (initialData) => {
+//   return useSWR(`/api/projects`, fetcher, { fallbackData: initialData });
+// };
+
+export const useGetProjects = ({ offset, filter }, initialData) => {
+  return useSWR(
+    `
+    /api/projects?offset=${offset || 0}&date=${filter.date.asc ? 'asc' : 'desc'}`,
+    fetcher,
+    { initialData }
+  );
+};

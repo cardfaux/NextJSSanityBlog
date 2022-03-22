@@ -64,8 +64,6 @@ export default function Home({ blogs, preview, projects, featuredBlogs }) {
 
   const { data, size, setSize, hitEnd } = useGetBlogsPages({ filter });
   // TO DO: I am recieving the featured projects data here, data needs passed to the FeaturedBlogSection
-  console.log(projects);
-  console.log(featuredBlogs);
   return (
     <PageLayout>
       {preview && <PreviewAlert />}

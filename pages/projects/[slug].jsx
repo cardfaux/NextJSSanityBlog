@@ -4,6 +4,7 @@ import ProjectContent from '../../components/ProjectsPage/ProjectContent';
 import { getProjectBySlug, getAllProjects } from 'lib/api';
 import { Row, Col } from 'react-bootstrap';
 import { urlFor } from 'lib/api';
+import moment from 'moment';
 
 const ProjectDetail = ({ project }) => {
   return (
@@ -15,7 +16,7 @@ const ProjectDetail = ({ project }) => {
             subtitle={project.projectSubtitle}
             coverImage={urlFor(project.coverImage).height(600).url()}
             // author={project.author}
-            date={project.date}
+            date={moment(project.date).format('LL')}
           />
           <hr />
           <ProjectContent content={project.content} />
@@ -29,6 +30,7 @@ export async function getStaticProps({ params }) {
   const project = await getProjectBySlug(params.slug);
   return {
     props: { project },
+    revalidate: 1,
   };
 }
 
