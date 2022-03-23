@@ -1,4 +1,8 @@
 import { FeaturedBlogSection } from './FeaturedBlogStyles';
+import NewCardItem from '../NewCardItem';
+import { urlFor } from 'lib/api';
+
+import moment from 'moment';
 
 const OurWorks = ({ featuredBlogs }) => {
   return (
@@ -7,43 +11,19 @@ const OurWorks = ({ featuredBlogs }) => {
       <div className='works--grid'>
         {featuredBlogs.map((blog) => {
           return (
-            <div key={blog.slug} className='works--item'>
-              <div className='works--text'>
-                <h3>{blog.title}</h3>
-                <p>{blog.subtitle}</p>
-              </div>
-            </div>
+            <NewCardItem
+              slug={blog.slug}
+              image={blog.coverImage}
+              title={blog.title}
+              subTitle={blog.subtitle}
+              date={blog.date}
+              link={{
+                href: '/blogs/[slug]',
+                as: `/blogs/${blog.slug}`,
+              }}
+            />
           );
         })}
-        {/* <div className='works--item'>
-          <div className='works--text'>
-            <h3>blog NAME</h3>
-            <p>
-              It is a long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </p>
-          </div>
-        </div>
-
-        <div className='works--item featured'>
-          <div className='works--text'>
-            <h3>blog NAME</h3>
-            <p>
-              It is a long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </p>
-          </div>
-        </div>
-
-        <div className='works--item'>
-          <div className='works--text'>
-            <h3>blog NAME</h3>
-            <p>
-              It is a long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </p>
-          </div>
-        </div> */}
       </div>
     </FeaturedBlogSection>
   );

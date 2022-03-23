@@ -42,14 +42,14 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
               <Nav.Link
                 as={() => (
                   <Link href='/'>
-                    <a className='fj-navbar-item fj-navbar-link'>Development</a>
+                    <a className='fj-navbar-item fj-navbar-link'>Web-Work</a>
                   </Link>
                 )}
               />
 
               <Nav.Link
                 as={() => (
-                  <Link href='/'>
+                  <Link href='/services'>
                     <a className='fj-navbar-item fj-navbar-link'>Services</a>
                   </Link>
                 )}

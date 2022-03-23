@@ -1,3 +1,4 @@
+import NewCardItem from '../NewCardItem';
 import { OurWorksSection } from './OurWorksStyles';
 import PhoenixEgg from '../PhoenixEgg';
 
@@ -8,43 +9,18 @@ const OurWorks = ({ projects }) => {
       <div className='works--grid'>
         {projects.map((project) => {
           return (
-            <div key={project.slug} className='works--item'>
-              <div className='works--text'>
-                <h3>{project.projectTitle}</h3>
-                <p>{project.projectSubtitle}</p>
-              </div>
-            </div>
+            <NewCardItem
+              slug={project.slug}
+              image={project.coverImage}
+              title={project.projectTitle}
+              subTitle={project.projectSubtitle}
+              link={{
+                href: '/projects/[slug]',
+                as: `/projects/${project.slug}`,
+              }}
+            />
           );
         })}
-        {/* <div className='works--item'>
-          <div className='works--text'>
-            <h3>COMPANY NAME</h3>
-            <p>
-              It is a long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </p>
-          </div>
-        </div>
-
-        <div className='works--item featured'>
-          <div className='works--text'>
-            <h3>COMPANY NAME</h3>
-            <p>
-              It is a long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </p>
-          </div>
-        </div>
-
-        <div className='works--item'>
-          <div className='works--text'>
-            <h3>COMPANY NAME</h3>
-            <p>
-              It is a long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </p>
-          </div>
-        </div> */}
       </div>
       <div className='phoenix--egg'>
         <PhoenixEgg />
