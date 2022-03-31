@@ -8,7 +8,7 @@ const NewCardItem = ({ slug, image, title, subTitle, date, link }) => {
       {link ? (
         <Link {...link}>
           <a>
-            <article key={slug} className='works--item'>
+            <article className='works--item'>
               <div className='works--text'>
                 {date && <p>{moment(date).format('LL')}</p>}
                 <img
