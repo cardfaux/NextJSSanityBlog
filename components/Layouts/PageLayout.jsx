@@ -119,6 +119,8 @@ const StyledWrapper = styled.div`
   .page-footer-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    max-width: 1400px;
+    margin: auto;
   }
 
   h6.footer-heading {

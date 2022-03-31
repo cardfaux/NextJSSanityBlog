@@ -24,6 +24,8 @@ export const StyledNavbar = styled(Navbar)`
 `;
 
 export const StyledHeader = styled.header`
+  max-width: 1400px;
+  margin: auto;
   /* position: absolute;
   top: 0;
   left: 0;

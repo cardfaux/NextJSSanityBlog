@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const FoldSection = styled.section`
   position: relative;
-  margin-bottom: 2rem;
+  max-width: 1400px;
+  margin: auto;
 `;
 
 export const FoldGrid = styled.div`

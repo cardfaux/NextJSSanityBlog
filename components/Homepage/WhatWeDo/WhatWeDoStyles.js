@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledSection = styled.section`
+  max-width: 1400px;
+  margin: auto;
   h2.what--title {
     color: #00b7f1;
     font-family: 'Josefin Sans', sans-serif;

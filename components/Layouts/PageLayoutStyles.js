@@ -2,7 +2,8 @@ import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 
 export const MainContainer = styled(Container)`
-  max-width: 1400px;
+  /* max-width: 1400px; */
+  max-width: 100%;
   padding: 0;
   margin: auto;
   svg.smoke--background {

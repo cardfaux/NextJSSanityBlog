@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const OurWorksSection = styled.section`
+  max-width: 1400px;
+  margin: auto;
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;

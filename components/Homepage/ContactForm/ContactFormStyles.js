@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const ContactFormSection = styled.section`
+  padding-top: 10rem;
+  background-color: #0f0f34;
   display: flex;
   flex-direction: column;
   align-items: center;

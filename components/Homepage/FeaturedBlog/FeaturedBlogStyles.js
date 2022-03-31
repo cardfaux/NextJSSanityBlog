@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const FeaturedBlogSection = styled.section`
   margin-bottom: 10rem;
+  max-width: 1400px;
+  margin: auto;
+  padding-bottom: 10rem;
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;
