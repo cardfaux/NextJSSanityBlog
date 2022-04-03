@@ -54,3 +54,8 @@ div.mb-5.cards-list-items.row {
   bottom: 0;
   top: auto;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3cd0ff !important;
+}
