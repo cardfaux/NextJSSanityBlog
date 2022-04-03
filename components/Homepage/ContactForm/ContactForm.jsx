@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 
+import Curve from '../../SVGs/Curve';
 import TwitterIcon from '../../SVGs/Twitter';
 import SendIcon from '../../SVGs/Send';
 import LinkedinIcon from '../../SVGs/Linkedin';
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <ContactFormSection>
+      <Curve />
       <h5>have any projects in mind?</h5>
       <span className='span-write'>write to us</span>
       {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}

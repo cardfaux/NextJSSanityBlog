@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const ContactFormSection = styled.section`
-  padding-top: 10rem;
+  position: relative;
+  padding-top: 30rem;
   background-color: #0f0f34;
   display: flex;
   flex-direction: column;

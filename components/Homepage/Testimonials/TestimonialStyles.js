@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const TestimonialsStylesSection = styled.section`
   margin-bottom: 10rem;
   background-color: #0f0f34;
-  padding: 20rem 0;
+  position: relative;
+  padding: 30rem 0;
   .inside--testimonials__container {
     display: grid;
     grid-template-columns: auto auto;
