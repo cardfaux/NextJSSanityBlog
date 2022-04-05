@@ -1,8 +1,14 @@
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { testimonialsList } from '../../../store/Testimonials';
 import Curve from '../../SVGs/Curve';
 
 import { TestimonialsStylesSection } from './TestimonialStyles';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Navigation } from 'swiper';
 
 const TestimonialsSection = () => {
   return (
@@ -16,40 +22,49 @@ const TestimonialsSection = () => {
               what customers <br /> think of us
             </p>
           </div>
-          <div className='article--container'>
-            <article>
-              <div className='top-image__container'>
-                <Image
-                  src='/Customer.png'
-                  alt='cuastomer testimonial'
-                  width={142}
-                  height={142}
-                />
-              </div>
-              <h1>john smith</h1>
-              <p>
-                It is a long established fact that a reader will be distracted by the
-                readable content of a page when looking at its layout.
-              </p>
-              <Image src='/Stars.png' alt='stars' width={111} height={16} />
-            </article>
-            <article>
-              <div className='top-image__container'>
-                <Image
-                  src='/Customer.png'
-                  alt='cuastomer testimonial'
-                  width={142}
-                  height={142}
-                />
-              </div>
-              <h1>john smith</h1>
-              <p>
-                It is a long established fact that a reader will be distracted by the
-                readable content of a page when looking at its layout.
-              </p>
-              <Image src='/Stars.png' alt='stars' width={111} height={16} />
-            </article>
-          </div>
+          {/* <div className='article--container'> */}
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={2}
+            loop={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              980: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            }}
+            pagination={{ clickable: true }}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            className='mySwipper'
+          >
+            {testimonialsList.map((tL) => {
+              return (
+                <SwiperSlide key={tL.id.toString()}>
+                  <article>
+                    <div className='top-image__container'>
+                      <Image
+                        src={tL.coverImage}
+                        alt='cuastomer testimonial'
+                        width={142}
+                        height={142}
+                      />
+                    </div>
+                    <h1>{tL.name}</h1>
+                    <p>{tL.shortDescription}</p>
+                    <Image src='/Stars.png' alt='stars' width={111} height={16} />
+                  </article>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          {/* </div> */}
         </div>
         <Curve invert />
       </TestimonialsStylesSection>

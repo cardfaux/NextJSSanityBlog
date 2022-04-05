@@ -1,6 +1,7 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import Link from 'next/link';
 
+import ActiveLink from './ActiveLink';
 import Logo from 'components/Homepage/Logo';
 import SvgBackground from '../svgBackground';
 import ThemeToggle from 'components/ThemeToggle';
@@ -33,49 +34,49 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
               {/* <ThemeToggle onChange={toggleTheme} /> */}
               <Nav.Link
                 as={() => (
-                  <Link href='/'>
-                    <a className='fj-navbar-item fj-navbar-link active'>Home</a>
-                  </Link>
+                  <ActiveLink activeClassName='active' href='/'>
+                    <a className='fj-navbar-item fj-navbar-link'>Home</a>
+                  </ActiveLink>
                 )}
               />
 
               <Nav.Link
                 as={() => (
-                  <Link href='/'>
+                  <ActiveLink activeClassName='active' href='/webwork'>
                     <a className='fj-navbar-item fj-navbar-link'>Web-Work</a>
-                  </Link>
+                  </ActiveLink>
                 )}
               />
 
               <Nav.Link
                 as={() => (
-                  <Link href='/services'>
+                  <ActiveLink activeClassName='active' href='/services'>
                     <a className='fj-navbar-item fj-navbar-link'>Services</a>
-                  </Link>
+                  </ActiveLink>
                 )}
               />
 
               <Nav.Link
                 as={() => (
-                  <Link href='/projects'>
+                  <ActiveLink activeClassName='active' href='/projects'>
                     <a className='fj-navbar-item fj-navbar-link'>Portfolio</a>
-                  </Link>
+                  </ActiveLink>
                 )}
               />
 
               <Nav.Link
                 as={() => (
-                  <Link href='/blogs'>
+                  <ActiveLink activeClassName='active' href='/blogs'>
                     <a className='fj-navbar-item fj-navbar-link'>Blog</a>
-                  </Link>
+                  </ActiveLink>
                 )}
               />
 
               <Nav.Link
                 as={() => (
-                  <Link href='/'>
+                  <ActiveLink activeClassName='active' href='/contact'>
                     <a className='fj-navbar-item fj-navbar-link'>Contacts</a>
-                  </Link>
+                  </ActiveLink>
                 )}
               />
 

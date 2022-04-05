@@ -27,7 +27,7 @@ export const FeaturedBlogSection = styled.section`
   .works--grid {
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     align-items: center;
     justify-items: center;
     gap: 25px;
