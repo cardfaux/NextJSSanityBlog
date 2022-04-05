@@ -6,19 +6,6 @@ import Link from 'next/link';
 import { servicesList } from '../../store/services';
 import PageLayout from '../../components/Layouts/PageLayout';
 
-// const files = fs.readdirSync('services');
-
-// const posts = files.map((fileName) => {
-//   const slug = fileName.replace('.md', '');
-//   const readFile = fs.readFileSync(`services/${fileName}`, 'utf-8');
-//   const { data: frontmatter } = matter(readFile);
-
-//   return {
-//     slug,
-//     frontmatter,
-//   };
-// });
-
 export default function ServicesPage({ servicesListLists, posts }) {
   return (
     <PageLayout>
