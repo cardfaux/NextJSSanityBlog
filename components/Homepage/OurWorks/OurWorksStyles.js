@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const OurWorksSection = styled.section`
   max-width: 1400px;
   margin: auto;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;
@@ -83,6 +86,7 @@ export const OurWorksSection = styled.section`
     display: flex;
     justify-content: end;
     align-items: center;
+    overflow: hidden;
     svg {
       width: 471px;
       transform: rotateZ(15deg);

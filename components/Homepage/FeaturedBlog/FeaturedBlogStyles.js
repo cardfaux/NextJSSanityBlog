@@ -5,6 +5,9 @@ export const FeaturedBlogSection = styled.section`
   max-width: 1400px;
   margin: auto;
   padding-bottom: 10rem;
+  @media (max-width: 768px) {
+    padding: 0rem 20px 10rem 20px;
+  }
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;
@@ -31,6 +34,9 @@ export const FeaturedBlogSection = styled.section`
     align-items: center;
     justify-items: center;
     gap: 25px;
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
     a {
       color: #ffffff00;
     }

@@ -10,10 +10,10 @@ export default function PageLayout({ children, className }) {
   return (
     <StyledWrapper className={theme.type}>
       <Head>
-        <link
+        {/* <link
           href='https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap'
           rel='stylesheet'
-        />
+        /> */}
       </Head>
       <MainContainer>
         <Navbar theme={theme} toggleTheme={toggleTheme} />

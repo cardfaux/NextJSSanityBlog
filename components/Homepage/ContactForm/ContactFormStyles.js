@@ -42,6 +42,9 @@ export const ContactForm = styled.form`
   flex-direction: column;
   margin: auto;
   gap: 1rem;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const SocialContainer = styled.div`
@@ -50,6 +53,9 @@ export const SocialContainer = styled.div`
   align-self: center;
   width: 600px;
   margin: 4rem auto;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const SocialBlock = styled.div`

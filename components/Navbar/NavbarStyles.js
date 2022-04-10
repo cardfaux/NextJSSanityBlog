@@ -7,6 +7,9 @@ export const StyledNavbar = styled(Navbar)`
   /* margin: 0 auto 23rem auto; */
   padding-top: 5rem !important;
   margin-bottom: 0;
+  @media (max-width: 768px) {
+    padding-top: 0 !important;
+  }
   a.fj-navbar-item.fj-navbar-link.active {
     color: #00b7f1;
     font-family: 'Josefin Sans', sans-serif;
@@ -26,6 +29,9 @@ export const StyledNavbar = styled(Navbar)`
 export const StyledHeader = styled.header`
   max-width: 1400px;
   margin: auto;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
   /* position: absolute;
   top: 0;
   left: 0;

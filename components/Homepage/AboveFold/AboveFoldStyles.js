@@ -11,7 +11,18 @@ export const FoldGrid = styled.div`
   grid-template-columns: 50% 60%;
   justify-items: center;
   align-items: center;
+  @media (max-width: 768px) {
+    position: relative;
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  @media (max-width: 368px) {
+    grid-template-rows: auto 6rem;
+  }
   .text {
+    @media (max-width: 368px) {
+      z-index: 2;
+    }
     h1 {
       color: #3bd0ff;
       font-family: 'Josefin Sans', sans-serif;
@@ -33,13 +44,26 @@ export const FoldGrid = styled.div`
       font-weight: 300;
       font-size: 20px;
       width: 112%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 `;
 
 export const StyledPhoenixContainer = styled.div`
+  @media (max-width: 768px) {
+    justify-self: left;
+  }
+  @media (max-width: 368px) {
+    z-index: 1;
+    opacity: 0.4;
+  }
   svg {
     width: 35rem;
+    @media (max-width: 768px) {
+      width: 19rem;
+    }
   }
 `;
 
@@ -49,6 +73,12 @@ export const HeaderIconsContainer = styled.div`
   align-items: center;
   gap: 3rem;
   margin-top: -2rem;
+  @media (max-width: 768px) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 20px;
+  }
 
   .wrapper {
     width: 56px;
@@ -58,6 +88,9 @@ export const HeaderIconsContainer = styled.div`
     justify-content: center;
     align-items: center;
     outline: 1px solid white;
+    @media (max-width: 368px) {
+      z-index: 2;
+    }
 
     .underlay {
       width: 100%;

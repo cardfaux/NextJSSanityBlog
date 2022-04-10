@@ -1,16 +1,10 @@
-import {
-  TwoColumnGrid,
-  GlassCard,
-  TextOverlay,
-  StyledSection,
-} from './WhatWeDoStyles';
+import { TwoColumnGrid, TextOverlay, StyledSection } from './WhatWeDoStyles';
 
 const WhatWeDo = () => {
   return (
     <StyledSection>
       <h2 className='what--title'>what do we do?</h2>
       <TwoColumnGrid>
-        <GlassCard></GlassCard>
         <TextOverlay>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -39,7 +33,6 @@ const WhatWeDo = () => {
         </div>
       </TwoColumnGrid>
       <TwoColumnGrid>
-        <GlassCard></GlassCard>
         <TextOverlay>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -75,7 +68,6 @@ const WhatWeDo = () => {
         </div>
       </TwoColumnGrid>
       <TwoColumnGrid>
-        <GlassCard></GlassCard>
         <TextOverlay>
           <svg
             xmlns='http://www.w3.org/2000/svg'

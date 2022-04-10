@@ -5,6 +5,9 @@ export const TestimonialsStylesSection = styled.section`
   background-color: #0f0f34;
   position: relative;
   padding: 30rem 0;
+  @media (max-width: 768px) {
+    padding: 15rem 20px;
+  }
   .inside--testimonials__container {
     /* display: grid;
     grid-template-columns: auto auto; */
@@ -12,6 +15,10 @@ export const TestimonialsStylesSection = styled.section`
     justify-content: center;
     max-width: 1400px;
     margin: auto;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: start;
+    }
     .just--text {
       display: flex;
       flex-direction: column;
