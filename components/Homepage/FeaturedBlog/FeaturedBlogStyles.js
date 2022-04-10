@@ -5,17 +5,20 @@ export const FeaturedBlogSection = styled.section`
   max-width: 1400px;
   margin: auto;
   padding-bottom: 10rem;
-  @media (max-width: 768px) {
-    padding: 0rem 20px 10rem 20px;
+  @media (max-width: 350px) {
+    padding-bottom: 0;
   }
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: clamp(24px, 2.5vw, 30px);
     margin: 50px 0;
     text-transform: uppercase;
     position: relative;
+    @media (max-width: 768px) {
+      padding-left: 20px;
+    }
   }
   h1::before {
     content: '';
@@ -26,6 +29,9 @@ export const FeaturedBlogSection = styled.section`
     position: absolute;
     bottom: 0;
     left: 0;
+    @media (max-width: 768px) {
+      margin-left: 20px;
+    }
   }
   .works--grid {
     display: grid;
@@ -83,6 +89,7 @@ export const FeaturedBlogSection = styled.section`
         font-family: 'Josefin Sans', sans-serif;
         font-weight: 700;
         font-size: 33px;
+        font-size: clamp(22px, 3vw, 33px);
         text-transform: uppercase;
         z-index: 2;
       }

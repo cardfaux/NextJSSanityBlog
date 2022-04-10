@@ -7,7 +7,9 @@ export const ContactFormSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  @media (max-width: 350px) {
+    padding-top: 8rem;
+  }
   h5 {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;

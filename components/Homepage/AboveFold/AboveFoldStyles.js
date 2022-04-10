@@ -11,6 +11,9 @@ export const FoldGrid = styled.div`
   grid-template-columns: 50% 60%;
   justify-items: center;
   align-items: center;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
   @media (max-width: 768px) {
     position: relative;
     grid-template-columns: 1fr;
@@ -28,7 +31,7 @@ export const FoldGrid = styled.div`
       font-family: 'Josefin Sans', sans-serif;
       font-weight: 700;
       text-transform: uppercase;
-      font-size: 30px;
+      font-size: clamp(24px, 2.5vw, 30px);
     }
     h2 {
       color: #ffffff;
@@ -36,7 +39,7 @@ export const FoldGrid = styled.div`
       font-weight: 400;
       text-transform: uppercase;
       margin: 30px 0;
-      font-size: 41px;
+      font-size: clamp(18px, 3vw, 41px);
     }
     p {
       color: #ffffff;
@@ -64,6 +67,9 @@ export const StyledPhoenixContainer = styled.div`
     @media (max-width: 768px) {
       width: 19rem;
     }
+    @media (max-width: 368px) {
+      width: 100%;
+    }
   }
 `;
 
@@ -78,6 +84,11 @@ export const HeaderIconsContainer = styled.div`
     bottom: 0;
     right: 0;
     padding-right: 20px;
+  }
+  @media (max-width: 368px) {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
   }
 
   .wrapper {

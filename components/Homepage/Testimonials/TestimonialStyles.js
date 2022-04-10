@@ -8,6 +8,10 @@ export const TestimonialsStylesSection = styled.section`
   @media (max-width: 768px) {
     padding: 15rem 20px;
   }
+  @media (max-width: 350px) {
+    padding: 8rem 20px;
+    margin-bottom: 0;
+  }
   .inside--testimonials__container {
     /* display: grid;
     grid-template-columns: auto auto; */
@@ -30,7 +34,7 @@ export const TestimonialsStylesSection = styled.section`
         font-weight: 700;
         text-transform: uppercase;
         color: #3bd0ff;
-        font-size: 30px;
+        font-size: clamp(24px, 2.5vw, 30px);
         position: relative;
       }
       h5::before {
@@ -48,7 +52,7 @@ export const TestimonialsStylesSection = styled.section`
         font-weight: 300;
         text-transform: uppercase;
         color: #ffffff;
-        font-size: 25px;
+        font-size: clamp(19px, 2.5vw, 25px);
         position: relative;
       }
       p::before {

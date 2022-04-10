@@ -10,9 +10,13 @@ export const StyledSection = styled.section`
     color: #00b7f1;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: clamp(24px, 2.5vw, 30px);
     margin: 50px 0;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+      position: relative;
+      z-index: 2;
+    }
   }
 `;
 
@@ -88,11 +92,14 @@ export const TextOverlay = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
+  @media (max-width: 350px) {
+    padding: 0px 10px;
+  }
   h3 {
     color: #ffffff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 31px;
+    font-size: clamp(24px, 3vw, 31px);
     text-transform: capitalize;
     z-index: 2;
   }

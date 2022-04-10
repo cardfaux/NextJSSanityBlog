@@ -3,17 +3,17 @@ import styled from 'styled-components';
 export const OurWorksSection = styled.section`
   max-width: 1400px;
   margin: auto;
-  @media (max-width: 768px) {
-    padding: 0 20px;
-  }
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: clamp(24px, 2.5vw, 30px);
     margin: 50px 0;
     text-transform: uppercase;
     position: relative;
+    @media (max-width: 768px) {
+      padding-left: 20px;
+    }
   }
   h1::before {
     content: '';
@@ -24,6 +24,9 @@ export const OurWorksSection = styled.section`
     position: absolute;
     bottom: 0;
     left: 0;
+    @media (max-width: 768px) {
+      margin-left: 20px;
+    }
   }
   a {
     color: #ffffff00;
@@ -34,6 +37,9 @@ export const OurWorksSection = styled.section`
     aspect-ratio: 1 / 1;
     /* background-color: #404071; */
     border: inset;
+    @media (max-width: 350px) {
+      aspect-ratio: auto;
+    }
     ::after {
       content: '';
       position: absolute;
@@ -70,7 +76,7 @@ export const OurWorksSection = styled.section`
       color: #ffffff;
       font-family: 'Josefin Sans', sans-serif;
       font-weight: 700;
-      font-size: 33px;
+      font-size: clamp(22px, 3vw, 33px);
       text-transform: uppercase;
       z-index: 2;
     }

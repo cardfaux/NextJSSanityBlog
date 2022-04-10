@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
             navigation={true}
             modules={[Navigation]}
             spaceBetween={20}
-            slidesPerView={2}
+            slidesPerView={1}
             loop={true}
             breakpoints={{
               640: {

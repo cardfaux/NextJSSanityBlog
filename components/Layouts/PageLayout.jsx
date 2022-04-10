@@ -121,6 +121,9 @@ const StyledWrapper = styled.div`
     grid-template-columns: auto auto auto auto;
     max-width: 1400px;
     margin: auto;
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
+    }
   }
 
   h6.footer-heading {
@@ -156,6 +159,9 @@ const StyledWrapper = styled.div`
 
   .justify-self-end {
     justify-self: end;
+    @media (max-width: 768px) {
+      justify-self: auto;
+    }
   }
 
   .grid-heading {
@@ -191,6 +197,9 @@ const StyledWrapper = styled.div`
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 2rem 4rem;
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
+    }
   }
 
   .span-bold {
@@ -207,6 +216,9 @@ const StyledWrapper = styled.div`
     font-weight: 300;
     font-size: 30px;
     text-align: left;
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   .margin-right {

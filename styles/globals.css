@@ -59,3 +59,12 @@ div.mb-5.cards-list-items.row {
 .swiper-button-prev {
   color: #3cd0ff !important;
 }
+
+@media (max-width: 400px) {
+  .custom-shape-divider-top-1649003621 svg {
+    width: calc(350% + 1.3px);
+  }
+  .iONalh svg.smoke--background path {
+    transform: scale(1.3);
+  }
+}
