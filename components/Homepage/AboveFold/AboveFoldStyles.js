@@ -23,6 +23,7 @@ export const FoldGrid = styled.div`
     grid-template-rows: auto 6rem;
   }
   .text {
+    z-index: 2;
     @media (max-width: 368px) {
       z-index: 2;
     }

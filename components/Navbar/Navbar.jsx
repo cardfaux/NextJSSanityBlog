@@ -42,14 +42,6 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
 
               <Nav.Link
                 as={() => (
-                  <ActiveLink activeClassName='active' href='/webwork'>
-                    <a className='fj-navbar-item fj-navbar-link'>Web-Work</a>
-                  </ActiveLink>
-                )}
-              />
-
-              <Nav.Link
-                as={() => (
                   <ActiveLink activeClassName='active' href='/services'>
                     <a className='fj-navbar-item fj-navbar-link'>Services</a>
                   </ActiveLink>
