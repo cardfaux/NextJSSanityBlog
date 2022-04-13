@@ -19,16 +19,16 @@ const WhatWeDo = () => {
               transform='translate(-777.644 -326.26)'
             ></path>
           </svg>
-          <h3>Build Websites</h3>
+          <h3>ecommerce Dev Work</h3>
           <p>
-            It is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout.
+            Do you need an eCommerce store built to better serve your customers? Need
+            to expand your current business and reach more potential customers?
           </p>
         </TextOverlay>
         <div className='body--text'>
           <p className='side--text'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            we have experience building custom stores, shopify stores, & on other CMS
+            platforms.
           </p>
         </div>
       </TwoColumnGrid>
@@ -54,16 +54,16 @@ const WhatWeDo = () => {
               transform='translate(-241.154 -385.263)'
             ></path>
           </svg>
-          <h3>Build Web Applications</h3>
+          <h3>Web App development</h3>
           <p>
-            It is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout.
+            Maybe you need an unique web application built and you don't know where
+            to start? We can help you with everything from the front-end to the
+            back-end and to production.
           </p>
         </TextOverlay>
         <div className='body--text'>
           <p className='side--text'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            We can help you with building any web application your business may need.
           </p>
         </div>
       </TwoColumnGrid>
@@ -88,16 +88,17 @@ const WhatWeDo = () => {
               ></path>
             </g>
           </svg>
-          <h3>General Web Work</h3>
+          <h3>Web Design / Dev</h3>
           <p>
-            It is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout.
+            We do all general web design & web development work that your business
+            may need, allowing you to focus on your company and it's day to day
+            needs.
           </p>
         </TextOverlay>
         <div className='body--text'>
           <p className='side--text'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            From design to development to production we will hold your hand every
+            step of the way.
           </p>
         </div>
       </TwoColumnGrid>

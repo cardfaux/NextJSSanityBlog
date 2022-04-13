@@ -67,7 +67,7 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
               <Nav.Link
                 as={() => (
                   <ActiveLink activeClassName='active' href='/contact'>
-                    <a className='fj-navbar-item fj-navbar-link'>Contacts</a>
+                    <a className='fj-navbar-item fj-navbar-link'>Contact</a>
                   </ActiveLink>
                 )}
               />

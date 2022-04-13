@@ -9,15 +9,24 @@ const AboveFold = () => {
         <div className='text'>
           <h1>from the ashes studio</h1>
           <h2>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Creative web solutions, <br /> to give your visitors an unique
+            perspective.
           </h2>
           <p>
-            It is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout. The point of using
-            Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-            as opposed to using 'Content here, content here', making it look like
-            readable English.
+            We are extremely passionate about what we do and have always put our
+            clients first. From the initial meet to the finish line, our team's
+            uniquely personal attention will keep you in the loop as your creative
+            experience unfolds. We have a lust for life and a passion for creation.
+            We look forward to the opportunity to work with you and welcome you to
+            our world.
+          </p>
+          <p>
+            Specializing in web design & development, Great visual design comes
+            naturally to us. From identity and print to web and apps, our creative
+            agency team produces elegant user experience solutions that are on-point,
+            relevant, and always aligned with the latest trends. We specialize in
+            fresh, forward-thinking UX design, motion graphic elements, and product
+            design that help our clients shine bright in the digital universe.
           </p>
         </div>
         <StyledPhoenixContainer className='phoenix'>
